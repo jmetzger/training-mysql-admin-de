@@ -9,7 +9,7 @@
   1. Installation 
      * [Installation (Ubuntu)](installation-ubuntu.md)
      * [Start/Status/Stop/Enable von MySQL](start-stop-enable.md)
-     * [Does mariadb listen to the outside world](/installation/listening-where.md)
+     * [Lauscht mysql nach draussen ?](/installation/listening-where.md)
      
   1. Sicherheit
      * [Absichern von Server/Client mit ssql](security/ssl.md) 
