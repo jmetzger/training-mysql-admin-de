@@ -1,8 +1,8 @@
-# MySQL performance training (individual) + 18.01. - 21.01.2021 
+# Training - Grundlagen MySQL Admininstration (deutsch)  
 
 ## Agenda 
 
-  1. Architectur of MariaDB 
+  1. Architektur von MySQL 
      * [Architecture Server (Steps)](/performance/mysql-server-architecture.md)
      * [Query Cache Usage and Performance](/performance/query-cache.md)
      * [Optimizer-Basics](optimizer-basics.md) 
