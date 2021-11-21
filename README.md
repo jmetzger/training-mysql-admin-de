@@ -3,9 +3,7 @@
 ## Agenda 
 
   1. Architektur von MySQL 
-     * [Architecture Server (Steps)](/performance/mysql-server-architecture.md)
-     * [Query Cache Usage and Performance](/performance/query-cache.md)
-     * [Optimizer-Basics](optimizer-basics.md) 
+     * [Verarbeitungsschritte Server (Steps)](/performance/mysql-server-architecture.md)
      * [Storage Engines](/basics/storage-engines.md) 
 
   1. Installation 
