@@ -3,7 +3,7 @@
 ## Agenda 
 
   1. Architektur von MySQL 
-     * [Verarbeitungsschritte Server (Steps)](/performance/mysql-server-architecture.md)
+     * [Verarbeitungsschritte Server (Schritte)](/performance/mysql-server-architecture.md)
      * [Storage Engines](/basics/storage-engines.md) 
 
   1. Installation 
@@ -11,14 +11,7 @@
      
   1. Security 
      * [Secure with SSL server/client](security/ssl.md) 
-
-  1. InnoDB - Storage Engine 
-     * [InnoDB - Storage Engine - Structure](/innodb/innodb-structure.md) 
-     * [Important InnoDB - configuration - options to optimized performance](/innodb/innodb.md) 
   
-  1. Training Data 
-     * [Setup training data "contributions"](/indexes/setup-training-data-contributions.md)
-     
   1. Performance 
      * [io-Last/CPU-Last](performance/last.md) 
      * [Views and performance](/performance/views.md)  
