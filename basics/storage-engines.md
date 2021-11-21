@@ -1,40 +1,34 @@
 # Storage Engines 
 
-## Why ?
+## Warum ?
 
 ```
-Let's you choose:
-How your data is stored
+Du triffst die Auswahl:
+Wie sollen Deine gespeichert werden
 ```
 
-## What ?
+## Wie unterscheiden sich die Storage Engines ?
 
-  * Performance, features and other characteristics you want
+  * In der Performance, Features und anderen Charakteristiken, die Du brauchst 
 
+## Was machen Sie ?
 
-## What do they do ?
+  * Sie sind zuständig für: Speichern und Lesen aller den in MySQL
+  * Jede Storage Engine hat:
+    * Vor- und Nachteile  
+  * Der Server kommuniziert den Storage Engines über die storage engine API 
+    * Unterschiede kann ich durch das Interface nicht sehen.
+    * Die api enthält contains x 12 low-level Funktionen e.g. “Beginne eine Transkation”, “Hole die Zeilen, die diesen Primärschlüssel hat”
 
-  * In charge for: Responsible for storing and retrieving all data stored in MySQL
-  * Each storage engine has its:
-    * Drawbacks and benefits
-  * Server communicates with them through the storage engine API 
-    * this interface hides differences
-    * makes them largely transparent at query layer
-    * api contains a couple of dozen low-level functions e.g. “begin a transaction”, “fetch the row that has this primary key”
+## Storage Engine machen folgendes NICHT ....
 
-## Storage Engine do not ....
+  * Storage Engines parsen kein SQL
+  * Storage Engines kommunizieren nicht miteinander.
 
-  * Storage Engines do not parse SQL
-  * Storage Engines do not communicate with each other
-
-## They simply .....
-
-  * They simply respond to requests from the server
-
-## Which are the most important one ?
+## Welches sind die Wichtigsten ?
 
   * MyISAM/Aria
-  * InnoDB
+  * InnoDB (Default) 
   * Memory
   * CSV
   * Blackhole (/dev/null)
