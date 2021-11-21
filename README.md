@@ -8,6 +8,7 @@
 
   1. Installation 
      * [Installation (Ubuntu)](installation-ubuntu.md)
+     * [Start/Status/Stop/Enable von MySQL](start-stop-enable.md)
      
   1. Security 
      * [Secure with SSL server/client](security/ssl.md) 
