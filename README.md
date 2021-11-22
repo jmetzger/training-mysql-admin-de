@@ -28,6 +28,9 @@
      * [Verschlüsselte Backups mit xtrabackup](backups/xtrabackup-encrypted.md) 
      * [Prüfen ob socket verwendet, bei lokalem System](security/check-socket.md)
      * [mysql_secure_installation - validate plugin aktivieren](security/mysql-secure-installation.md)
+
+  1. Sicherheit (CIS) 
+     * [1.1 Place Databases on Non-System Partitions](cis/db-non-system-partition.md)
   
   1. Tools 
      * [Testdatenbank Sakila installieren](tools/sakila.md)  
