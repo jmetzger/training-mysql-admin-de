@@ -31,6 +31,7 @@
 
   1. Sicherheit (CIS) 
      * [1.1 Place Databases on Non-System Partitions](cis/db-non-system-partition.md)
+     * [1.2 Use dedicated Least Privileged Account](cis/1-2-least-privileges-user-for-mysl.md)
   
   1. Tools 
      * [Testdatenbank Sakila installieren](tools/sakila.md)  
