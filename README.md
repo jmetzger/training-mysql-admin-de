@@ -13,12 +13,16 @@
 
   1. Konfiguration 
      * [Konfiguration anpassen und neu starten]()
+
+  1. Backup
+     * [Backup mit mysqldump - best practices](backup-restore/mysqldump.md) 
+     * [Use xtrabackup for MariaDB 5.5](backup-restore/xtrabackup-for-mariadb-5-5.md)
    
   1. Sicherheit
      * [Absichern von Server/Client mit ssl](security/ssl.md) 
      * [Verschlüsselte Backups mit xtrabackup](backups/xtrabackup-encrypted.md) 
   
-  1. Backup and Restore (Point-In-Time aka PIT) 
-     * [Backup with mysqldump - best practices](backup-restore/mysqldump.md) 
-     * [Use xtrabackup for MariaDB 5.5](backup-restore/xtrabackup-for-mariadb-5-5.md)
-  
+  1. Upgrade 
+     * [Upgrade von MySQL 5.7 -> 8](upgrade/mysql-5-7-to-8.md)
+
+    
