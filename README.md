@@ -36,5 +36,5 @@
 
   1. Documentation 
      * [Server System Variables - Reference](https://dev.mysql.com/doc/refman/8.0/en/server-system-variable-reference.html)
-
+     * [MySQL Performance Dokument - en](https://schulung.t3isp.de/documents/pdfs/mysql/mysql-performance.pdf)
     
