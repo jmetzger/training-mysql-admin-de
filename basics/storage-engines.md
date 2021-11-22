@@ -18,7 +18,7 @@ Wie sollen Deine Daten gespeichert werden
     * Vor- und Nachteile  
   * Der Server kommuniziert mit den Storage Engines über die storage engine API 
     * Unterschiede kann ich durch das Interface nicht sehen.
-    * Die api enthält contains x 12 low-level Funktionen e.g. “Beginne eine Transkation”, “Hole die Zeilen, die diesen Primärschlüssel hat”
+    * Die api enthält mehrere Dutzend low-level Funktionen z.B. “Beginne eine Transkation”, “Hole die Zeilen, die diesen Primärschlüssel hat”
 
 ## Storage Engine machen folgendes NICHT ....
 
@@ -27,10 +27,10 @@ Wie sollen Deine Daten gespeichert werden
 
 ## Welches sind die Wichtigsten ?
 
-  * MyISAM/Aria
+  * MyISAM
   * InnoDB (Default) 
   * Memory
   * CSV
   * Blackhole (/dev/null)
   * Archive
-  * Federated/FederatedX
+  * Federated
