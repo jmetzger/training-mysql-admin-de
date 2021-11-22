@@ -19,6 +19,7 @@
   1. Administration 
      * [Globale und Session Variablen (Server System Variables)](/admin/global-session-variables.md)
      * [Error-log](/admin/log-error.md)
+     * [Slow Query Log](/admin/slow-query-log.md)
 
   1. Backup
      * [Backup mit mysqldump - best practices](backup-restore/mysqldump.md) 
