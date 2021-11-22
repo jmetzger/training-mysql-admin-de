@@ -15,8 +15,8 @@
      * [Konfiguration anpassen und neu starten]()
    
   1. Sicherheit
-     * [Absichern von Server/Client mit ssql](security/ssl.md) 
-     * 
+     * [Absichern von Server/Client mit ssl](security/ssl.md) 
+     * [Verschlüsselte Backups mit xtrabackup](backups/xtrabackup-encrypted.md) 
   
   1. Backup and Restore (Point-In-Time aka PIT) 
      * [Backup with mysqldump - best practices](backup-restore/mysqldump.md) 
