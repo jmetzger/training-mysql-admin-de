@@ -4,7 +4,8 @@
 
   1. Architektur von MySQL 
      * [Verarbeitungsschritte Server (Schritte)](/performance/mysql-server-architecture.md)
-     * [Storage Engines](/basics/storage-engines.md) 
+     * [Storage Engines](/basics/storage-engines.md)
+     * [Unterschiede MySQL 5.7 -> 8](differences-mysql-5-7-to-8.md) 
 
   1. Installation 
      * [Installation (Ubuntu)](installation-ubuntu.md)
