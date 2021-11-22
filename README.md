@@ -11,11 +11,12 @@
      * [Start/Status/Stop/Enable von MySQL](start-stop-enable.md)
      * [Lauscht mysql nach draussen ?](/installation/listening-where.md)
 
-  1. Configuration 
-     * [Konfiguration anpassen und neu starten](
-     
+  1. Konfiguration 
+     * [Konfiguration anpassen und neu starten]()
+   
   1. Sicherheit
      * [Absichern von Server/Client mit ssql](security/ssl.md) 
+     * 
   
   1. Backup and Restore (Point-In-Time aka PIT) 
      * [Backup with mysqldump - best practices](backup-restore/mysqldump.md) 
