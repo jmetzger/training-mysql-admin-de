@@ -1,7 +1,6 @@
-# ssl - mariadb (only server certificate) 
+# SSL - MySQL (only server certificate) 
 
 ## Create CA and Server-Key 
-
 
 ```
 
@@ -57,13 +56,14 @@ chown -vR mysql:mysql /etc/mysql/ssl/
 
 ### Restart and check for errors 
 ```
-systemctl restart mariadb
-journalctl -u mariadb 
+systemctl restart mysql
+journalctl -u mysql
 
 ```
 
 ### Setup on clients 
 
+  * I am not sure we really need this in this szenario 
 ```
 # from 
 # copy /etc/mysql/ssl/ca-cert.pem 
@@ -74,7 +74,7 @@ scp ssl.tar.gz 11trainingdo@ip:/tmp
 ```
 
 ```
-sudo vi /etc/mysql/mariadb.conf.d/50-mysql-clients.cnf
+sudo vi /etc/mysql/conf.d/mysql.cnf
 
 Append/edit in [mysql] section:
 
