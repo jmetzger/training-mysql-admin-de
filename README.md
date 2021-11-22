@@ -15,6 +15,9 @@
   1. Konfiguration 
      * [Konfiguration anpassen und neu starten]()
 
+  1. Administration 
+     * [Globale und Session Variablen (Server System Variables)](/admin/global-session-variables.md)
+
   1. Backup
      * [Backup mit mysqldump - best practices](backup-restore/mysqldump.md) 
      * [Use xtrabackup for MariaDB 5.5](backup-restore/xtrabackup-for-mariadb-5-5.md)
