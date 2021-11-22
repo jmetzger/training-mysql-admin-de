@@ -23,6 +23,7 @@
      * [Absichern von Server/Client mit ssl](security/ssl.md) 
      * [Verschlüsselte Backups mit xtrabackup](backups/xtrabackup-encrypted.md) 
      * [Prüfen ob socket verwendet, bei lokalem System](security/check-socket.md)
+     * [mysql_secure_installation - validate plugin aktivieren](security/mysql-secure-installation.md)
   
   1. Upgrade 
      * [Upgrade von MySQL 5.7 -> 8](upgrade/mysql-5-7-to-8.md)
