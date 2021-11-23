@@ -40,6 +40,9 @@
   
   1. Tools 
      * [Testdatenbank Sakila installieren](tools/sakila.md)  
+
+  1. Authentifizierung / User-Management 
+     * [Für User altes Password-Verfahren mysql_native_password verwenden in MySQL 8](user/mysql_native_password.md)
   
   1. Upgrade 
      * [Upgrade von MySQL 5.7 -> 8](upgrade/mysql-5-7-to-8.md)
