@@ -25,7 +25,8 @@
      * [Backup mit mysqldump - best practices](backup-restore/mysqldump.md) 
      * [Backups PIT (Point-In-Time recovery)](backups/pit-recovery.md) 
      * [Use xtrabackup for MariaDB 5.5](backup-restore/xtrabackup-for-mariadb-5-5.md)
-     * [Backup und Wiederherstellen in neuer Datenbank](backups/ackup-restore-to-new-db.md)
+     * [Backup und Wiederherstellen in neuer Datenbank](backups/backup-restore-to-new-db.md)
+     * [mysqldump mit asynchroner Verschlüsselung](backups/mysqldump-with-encryption.md)
    
   1. Sicherheit
      * [Absichern von Server/Client mit ssl](security/ssl.md) 
