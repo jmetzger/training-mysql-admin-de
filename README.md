@@ -23,7 +23,7 @@
 
   1. Backup
      * [Backup mit mysqldump - best practices](backup-restore/mysqldump.md) 
-     * [Backups PIT (Point-In-Time recovery)](backups/pit.md) 
+     * [Backups PIT (Point-In-Time recovery)](backups/pit-recovery.md) 
      * [Use xtrabackup for MariaDB 5.5](backup-restore/xtrabackup-for-mariadb-5-5.md)
    
   1. Sicherheit
