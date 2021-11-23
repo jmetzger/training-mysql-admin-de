@@ -54,9 +54,10 @@ openssl verify -CAfile ca-cert.pem server-cert.pem client-cert.pem
 
 ## Configure Server 
 ```
-# create file 
-# /etc/my.cnf.d/z_ssl.cnf 
-[mysqld]
+# add to file in section [mysqld]
+# /etc/mysql/mysql.conf.d/mysqld.cnf 
+# [mysqld]
+# ... 
 ssl-ca=/etc/mysql/ssl/ca-cert.pem
 ssl-cert=/etc/mysql/ssl/server-cert.pem
 ssl-key=/etc/mysql/ssl/server-key.pem
