@@ -23,6 +23,7 @@ mysql> show variables like 'datadir';
 ## Walkthrough 
 
 ```
+# /etc/apparmod.d/
 vi usr.sbin.mysqld 
 # ---> change these lines 
 # Allow data dir access
