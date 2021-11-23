@@ -31,6 +31,7 @@
      * [Prüfen ob socket verwendet, bei lokalem System](security/check-socket.md)
      * [mysql_secure_installation - validate plugin aktivieren](security/mysql-secure-installation.md)
      * [general log deaktivieren](/security/disable-general-log.md)
+     * [plugin vs. components](/security/plugins-vs-components.md)
 
   1. Sicherheit (CIS) 
      * [1.1 Place Databases on Non-System Partitions](cis/db-non-system-partition.md)
