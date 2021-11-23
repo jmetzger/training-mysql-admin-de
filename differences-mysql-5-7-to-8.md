@@ -20,3 +20,23 @@ Das war vorher eher stabiler in der Form ganz wenigen bis gar keinen neuen Featu
 ```
 Während der Laufzeit server system variablen persistent setzen 
 ```
+
+## mysql ssl verbindung 
+
+```
+--ssl geht nicht mehr in MySQL 8
+stattdessen:
+--ssl-mode=REQUIRED 
+```
+
+## Komponenten / Components 
+
+```
+# Alternative zu den Plugins 
+
+Components/Komponenten sind neu in MySQL 8.
+
+
+
+
+```
