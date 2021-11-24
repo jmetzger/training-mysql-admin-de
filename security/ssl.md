@@ -176,7 +176,7 @@ mkdir cl-certs; cp -a client* cl-certs; cp -a ca-cert.pem cl-certs ; tar cvfz cl
 
 ```
 scp cl-certs.tar.gz 11trainingdo@<ip-des-clients>:/tmp 
-
+```
 
 
 
@@ -216,6 +216,4 @@ mysql> status
 ```
 ## Ref 
 
-  * https://dev.mysql.com/doc/refman/8.0/en/alter-user.html
-  
-
+  * https://dev.mysql.com/doc/refman/8.0/en/alter-user.html```
