@@ -107,22 +107,104 @@ x509_issuer: 0x
 x509_subject: 0x
 ```
 
-### Test on Client 
+### Test on Client (1. Versuch) 
 
 ```
+# Er verbindet sich per SSL 
+# Zertifikatsüberprüfung findet nur auf SERVER statt 
 mysql -uext -p -h<ip-des-servers>
-mysql>status
+mysql> status 
+mysql> exit 
+# Wir probieren es ohne SSL 
+mysql -uext -p -h<ip-des-servers> --ssl-mode=DISABLED 
+# Trotz richtigem Passwort 
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'ext'@'139.59.215.179' (using password: YES)
+
 ```
 
+### Client verpflichten ein eigenes Zertifikat zu haben 
 
-## 
+```
+# auf server als root
+mysql>ALTER USER ext@'%' REQUIRE X509
+
+```
+
+### On Client - fails because of missing client certificate  
+
+```
+mysql -uext -p -h159.223.23.99
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'ext'@'139.59.215.179' (using password: YES)
+```
+
+## Teil 2: 2-Weg-Sicherheit (auf Server und Client validiert) 
+
+### Client - Zertifikate auf Server erstellen 
+
+  * Wir verwenden die gleiche CA wie beim Server
+
+```
+# auf dem Server 
+cd /etc/mysql/ssl
+openssl req -newkey rsa:2048 -days 365 -nodes -keyout client-key.pem -out client-req.pem
+
+# process RSA - Key 
+openssl rsa -in client-key.pem -out client-key.pem
+
+# sign certficate with CA 
+openssl x509 -req -in client-req.pem -days 365 -CA ca-cert.pem -CAkey ca-key.pem -set_serial 01 -out client-cert.pem
+
+```
+
+### Client - Zertifikate validieren 
+
+```
+openssl verify -CAfile ca-cert.pem server-cert.pem
+```
+
+### Zertifikate für Client zusammenpacken
 
 
 
+### Zertifikate auf Client transferieren 
 
 
+
+### Zertifikate einrichten 
+
+```
+# auf client 
+cd /etc/mysql/cl-certs 
+ls -la 
+
+
+cd /etc/mysql/conf.d 
+vi mysql.cnf 
+[mysql]
+ssl-ca=/etc/mysql/cl-certs/ca-cert.pem
+ssl-cert=/etc/mysql/cl-certs/client-cert.pem
+ssl-key=/etc/mysql/cl-certs/client-key.pem
+```
+
+### Zertifikate testen 
+
+```
+# Auf Server überprüfen dass X509 für user eingestellt ist
+select user,ssl_type from mysql.user where user='ext'
+
+# Auf Client zum server connecten
+# Sollte die Verbindung nicht klappen stimmt auf dem 
+# Client etwas mit der Einrichtung nicht
+mysql -uext -p -h<ip-des-mysql-servers>
+mysql> status 
+
+
+
+```
 ## Ref 
 
-  * https://www.digitalocean.com/community/tutorials/how-to-configure-ssl-tls-for-mysql-on-ubuntu-18-04
+  * https://dev.mysql.com/doc/refman/8.0/en/alter-user.html
   
 
