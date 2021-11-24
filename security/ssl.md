@@ -1,6 +1,6 @@
 # SSL - MySQL 
 
-## Vorbereitung
+## Teil 1: 1-Weg-Sicherheit (nur auf Server validiert) 
 
 ```
 Bei MySQL 8 werden Zertfikate in der Regel bereits erstellt. 
@@ -13,7 +13,7 @@ mysql>show variables like '%HAVE_SSL%';
 
 ```
 
-## Herausfinden, ob SSL verwendet wird 
+### Herausfinden, ob SSL verwendet wird 
 
 ```
 # auf client auf dem mysql-server
@@ -23,13 +23,13 @@ SSL:			Not in use
 Connection:		Localhost via UNIX socket
 ```
 
-## Bitte das nicht verwenden, weil man damit nicht den Common Name setzen kann
+### Bitte das nicht verwenden, weil man damit nicht den Common Name setzen kann
 
 ```
 sudo mysql_ssl_rsa_setup --uid=mysql
 ```
 
-## CA (Certificate Authority) und Server-Key erstellen 
+### CA (Certificate Authority) und Server-Key erstellen 
 
 ```
 # On Server - create ca and certificates 
@@ -56,13 +56,13 @@ openssl x509 -req -in server-req.pem -days 365 -CA ca-cert.pem -CAkey ca-key.pem
 
 ```
 
-## Zertifikate validieren  
+### Zertifikate validieren  
 
 ```
 openssl verify -CAfile ca-cert.pem server-cert.pem
 ```
 
-## Configure Server 
+### Configure Server 
 ```
 # create file 
 # /etc/mysql/mysql.cnf.d/mysqld.cnf 
@@ -85,6 +85,37 @@ journalctl -u mysql
 
 ```
 
+### Externen user auf server einrichten
+
+```
+# Einloggen in mysql-client als root
+
+mysql> create user ext@'%' identified by 'P@ssw0rd';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> grant all on sakila.* to ext@'%';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> alter user ext@'%' REQUIRE SSL;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from user where user = 'ext' \G
+
+ssl_type: ANY
+ssl_cipher: 0x
+x509_issuer: 0x
+x509_subject: 0x
+```
+
+### Test on Client 
+
+```
+mysql -uext -p -h<ip-des-servers>
+mysql>status
+```
+
+
+## 
 
 
 
