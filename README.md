@@ -38,6 +38,7 @@
      * [general log deaktivieren](/security/disable-general-log.md)
      * [plugin vs. components](/security/plugins-vs-components.md)
      * [User Passwort-Länge und Passwort-Ablauf](users/validation.md)
+     * [Trigger ohne Super-Rechte anlegen](trigger-no-super.md)
 
   1. Sicherheit (CIS) 
      * [1.1 Place Databases on Non-System Partitions](cis/db-non-system-partition.md)
