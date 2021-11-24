@@ -148,6 +148,7 @@ ERROR 1045 (28000): Access denied for user 'ext'@'139.59.215.179' (using passwor
 ```
 # auf dem Server 
 cd /etc/mysql/ssl
+# Bitte Common-Name: MariaDB Client 
 openssl req -newkey rsa:2048 -days 365 -nodes -keyout client-key.pem -out client-req.pem
 
 # process RSA - Key 
@@ -161,14 +162,21 @@ openssl x509 -req -in client-req.pem -days 365 -CA ca-cert.pem -CAkey ca-key.pem
 ### Client - Zertifikate validieren 
 
 ```
-openssl verify -CAfile ca-cert.pem server-cert.pem
+openssl verify -CAfile ca-cert.pem client-cert.pem
 ```
 
 ### Zertifikate für Client zusammenpacken
 
+```
+mkdir cl-certs; cp -a client* cl-certs; cp -a ca-cert.pem cl-certs ; tar cvfz cl-certs.tar.gz cl-certs 
+```
 
 
 ### Zertifikate auf Client transferieren 
+
+```
+scp cl-certs.tar.gz 11trainingdo@<ip-des-clients>:/tmp 
+
 
 
 
@@ -176,6 +184,9 @@ openssl verify -CAfile ca-cert.pem server-cert.pem
 
 ```
 # auf client 
+mv /tmp/cl-certs.tar.gz /etc/mysql/
+cd /etc/mysql; tar xzvf cl-certs.tar.gz 
+
 cd /etc/mysql/cl-certs 
 ls -la 
 
