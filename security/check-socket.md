@@ -10,4 +10,6 @@ Applikation und Datenbank-Server sind auf gleichen Virtuellen bzw. Physischen Se
 ## Testfolge 
 
 ```
-
+lsof -i 
+localhost:mysql 
+```
