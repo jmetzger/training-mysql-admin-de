@@ -216,4 +216,5 @@ mysql> status
 ```
 ## Ref 
 
-  * https://dev.mysql.com/doc/refman/8.0/en/alter-user.html```
+  * https://dev.mysql.com/doc/refman/8.0/en/alter-user.html
+  * https://mariadb.com/kb/en/securing-connections-for-client-and-server/
